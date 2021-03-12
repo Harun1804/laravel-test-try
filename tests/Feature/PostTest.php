@@ -28,19 +28,19 @@ class PostTest extends TestCase
 
     public function testEdit()
     {
-        $response = $this->get('/posts/4/edit');
+        $response = $this->get('/posts/39/edit');
         $response->assertStatus(200);
     }
 
     public function testUpdate()
     {
-        $response = $this->put('/posts/4',['body' => 'Percobaan 4']);
+        $response = $this->put('/posts/39',['body' => 'Percobaan 4']);
         $response->assertStatus(302);
     }
 
     public function testDelete()
     {
-        $response = $this->delete('/posts/4');
+        $response = $this->delete('/posts/39');
         $response->assertStatus(302);
     }
 }
